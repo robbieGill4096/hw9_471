@@ -54,13 +54,14 @@ public class HerokuApplication {
     return "index";
   }
   public String getRandomString() {
-
+/* 
     Random rand = new Random();
   
     int rand_int1 = rand.nextInt(1000);
     String output="";
     output+=String.valueOf(rand_int1);
-    return (output);
+    return (output);*/
+    return "asdfasdf24352345234";
   
   }
   @RequestMapping("/db")
