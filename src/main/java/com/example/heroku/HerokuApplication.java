@@ -77,7 +77,7 @@ public class HerokuApplication {
 
       ArrayList<String> output = new ArrayList<String>();
       while (rs.next()) {
-        output.add("Read from DB: " + rs.getTimestamp("tick"));
+        output.add("Read from DB: " + rs.getTimestamp("tick") + rs.getString("random_string"));
         System.out.println("Robbie Gill");
       }
 
