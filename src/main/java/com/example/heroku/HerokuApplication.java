@@ -57,8 +57,7 @@ public class HerokuApplication {
     StringBuilder sb = new StringBuilder();
     String characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
     Random random = new Random();
-    for (int i = 0; i   
-   < length; i++) {
+    for (int i = 0; i < length; i++) {
       int index = random.nextInt(characters.length());
       sb.append(characters.charAt(index));
     }
