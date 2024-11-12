@@ -52,7 +52,7 @@ public class HerokuApplication {
   String index() {
     return "index";
   }
-  public String getRandomString() {
+  public String getRandomString() {/*
     int length = 20; // You can adjust the desired string length here
     StringBuilder sb = new StringBuilder();
     String characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
@@ -61,7 +61,8 @@ public class HerokuApplication {
       int index = random.nextInt(characters.length());
       sb.append(characters.charAt(index));
     }
-    return sb.toString();   
+    return sb.toString(); */
+    return "aasdf222"
   
   }
   @RequestMapping("/db")
