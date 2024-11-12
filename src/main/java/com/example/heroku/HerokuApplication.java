@@ -62,7 +62,7 @@ public class HerokuApplication {
       sb.append(characters.charAt(index));
     }
     return sb.toString(); */
-    return "aasdf222"
+    return "aasdf222";
   
   }
   @RequestMapping("/db")
