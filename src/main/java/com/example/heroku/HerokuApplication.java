@@ -33,7 +33,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Map;
-
+import java.security.SecureRandom;
 @Controller
 @SpringBootApplication
 public class HerokuApplication {
@@ -53,16 +53,16 @@ public class HerokuApplication {
     return "index";
   }
   public String getRandomString() {
-    int length = 20; // You can adjust the desired string length here
-    StringBuilder sb = new StringBuilder();
-    String characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
-    Random random = new Random();
-    for (int i = 0; i < length; i++) {
-      int index = random.nextInt(characters.length());
-      sb.append(characters.charAt(index));
-    }
-    return sb.toString(); 
-    //return "aasdf222";
+    private static final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    private static final SecureRandom RANDOM = new SecureRandom();
+
+    public static String generateRandomString(int length) {
+        StringBuilder sb = new StringBuilder(length);
+        for (int i = 0; i < length; i++) {
+            int index = RANDOM.nextInt(CHARACTERS.length());
+            sb.append(CHARACTERS.charAt(index));
+        }
+        return sb.toString();
   
   }
   @RequestMapping("/db")
