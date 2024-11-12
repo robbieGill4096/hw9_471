@@ -54,15 +54,17 @@ public class HerokuApplication {
     return "index";
   }
   public String getRandomString() {
-/* 
-    Random rand = new Random();
+    int length = 20; // You can adjust the desired string length here
+    StringBuilder sb = new StringBuilder();
+    String characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+    SecureRandom random = new SecureRandom(); // Use SecureRandom for security
   
-    int rand_int1 = rand.nextInt(1000);
-    String output="";
-    output+=String.valueOf(rand_int1);
-    return (output);*/
-    return "asdfasdf24352345234";
+    for (int i = 0; i < length; i++) {
+      int index = random.nextInt(characters.length());
+      sb.append(characters.charAt(index));
+    }
   
+    return sb.toString();
   }
   @RequestMapping("/db")
   String db(Map<String, Object> model) {
